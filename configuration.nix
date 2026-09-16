@@ -109,6 +109,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   # Some programs need SUID wrappers, can be configured further or are

@@ -18,5 +18,8 @@
 		tmux
 		sl
 		rofi
+		docker 
+		python3
+		plasma-panel-colorizer
 	];
 }
