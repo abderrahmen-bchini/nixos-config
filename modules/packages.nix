@@ -21,5 +21,11 @@
 		docker 
 		python3
 		plasma-panel-colorizer
+		fzf
+		eza
+    wireshark
+    gns3-gui
+    gns3-server
+      
 	];
 }

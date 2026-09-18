@@ -3,6 +3,7 @@
 {
 	fonts.packages = with pkgs; [
 		ibm-plex
+		nerd-fonts.bigblue-terminal
 	];
 
 	fonts.fontconfig = {
