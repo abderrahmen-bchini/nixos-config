@@ -26,6 +26,7 @@
     wireshark
     gns3-gui
     gns3-server
+    burpsuite
       
 	];
 }
