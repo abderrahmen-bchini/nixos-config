@@ -1,5 +1,7 @@
 { pkgs , ... }:
-
+let
+  unstable = import <nixos-unstable> {};
+in 
 {
 	environment.systemPackages = with pkgs; [
 		vim 
@@ -26,7 +28,13 @@
     wireshark
     gns3-gui
     gns3-server
-    burpsuite
-      
+    iftop
+    iotop
+    openvpn
+    tailscale
+    gcc
+    clang
+    gnumake 
+    unstable.fetch
 	];
 }
