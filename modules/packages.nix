@@ -36,5 +36,6 @@ in
     clang
     gnumake 
     unstable.fetch
+    file 
 	];
 }
