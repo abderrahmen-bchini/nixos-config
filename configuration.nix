@@ -13,17 +13,17 @@
     ];
 
   # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = false;
+  boot.loader.systemd-boot.enable = false;
   # using GRUB bootloader 
   boot.loader.grub = {
   	enable = true ;
-	device = "nodev";
-	efiSupport = true ;
-	useOSProber = true ;
+	  device = "nodev";
+	  efiSupport = true ;
+	  useOSProber = true ;
   };
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "cho9chmen"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -62,6 +62,8 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  # Enable KDE connect 
+  programs.kdeconnect.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -71,6 +73,20 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  # Enable the locate database 
+  services.locate={
+    enable = true ;
+    package = pkgs.plocate;
+  };
+  # Enable Virtual machine 
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      swtpm.enable = true;
+    };
+  };
+
+  programs.virt-manager.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -94,7 +110,7 @@
   users.users."engzlk" = {
     isNormalUser = true;
     description = "zlk";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "libvirtd"];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird

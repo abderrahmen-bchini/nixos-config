@@ -37,5 +37,21 @@ in
     gnumake 
     unstable.fetch
     file 
+    gparted 
+    xclip
+    hdparm
+    usbutils
+    smartmontools
+    exfatprogs
+    unzip
+    zip
+    plocate
+    vlc
+    cargo
+    qemu
+    dnsmasq 
+    libreoffice
+    qalculate-qt
+
 	];
 }
