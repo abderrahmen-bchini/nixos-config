@@ -52,6 +52,7 @@ in
     dnsmasq 
     libreoffice
     qalculate-qt
+    claude-code
 
 	];
 }
