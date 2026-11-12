@@ -53,6 +53,12 @@ in
     libreoffice
     qalculate-qt
     claude-code
-
+    obs-studio
+    php84
+    php84Packages.composer
+    mariadb
+    nodejs 
+    vscode 
+    anki
 	];
 }
